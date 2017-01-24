@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-export default (_options) => {
+export default _options => {
     const PATH = _options.path || '../.env',
           NODE_ENV = _options.node_env || {},
           FILE_ENV = getEnvFile(PATH)
@@ -16,7 +16,7 @@ export default (_options) => {
     return Object.assign({}, FILE_ENV, NODE_ENV)
 }
 
-const getEnvFile = (_path) => {
+const getEnvFile = _path => {
     try {
         return fs.readFileSync(path.join(__dirname, '../.env'), 'utf-8').split("\n")
     } catch(e) {
