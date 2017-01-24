@@ -1,5 +1,3 @@
-import colors from 'colors'
-
 import serverStartMessage from './serverStartMessage'
 
 export default (_port, _host) => {
