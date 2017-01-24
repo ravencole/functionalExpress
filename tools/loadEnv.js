@@ -18,7 +18,7 @@ export default _options => {
 
 const getEnvFile = _path => {
     try {
-        return fs.readFileSync(path.join(__dirname, '../.env'), 'utf-8').split("\n")
+        return fs.readFileSync(path.join(__dirname, _path), 'utf-8').split("\n")
     } catch(e) {
         return []
     }
